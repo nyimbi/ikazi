@@ -1,0 +1,202 @@
+<template name="Projects">
+	<div class="page-container container" id="content">
+		<div class="row" id="title_row">
+			<div class="col-md-12">
+				<h2 id="page_title" class="pull-left">
+					Projects
+				</h2>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> ProjectsList}}
+	</div>
+</template>
+
+<template name="ProjectsList">
+	<div id="projects-list" class="">
+		<form id="dataview-controls" class="form-inline">
+			<div id="dataview-controls-insert" class="form-group {{insertButtonClass}}">
+				<button type="submit" id="dataview-insert-button" class="btn btn-success">
+					<span class="fa fa-plus">
+					</span>
+					Add new
+				</button>
+			</div>
+			<div id="dataview-controls-search">
+				{{#if isNotEmpty}}
+				<div id="dataview-controls-search-group" class="form-group">
+					<label class="sr-only" for="search">
+						Search
+					</label>
+					<input type="text" class="form-control" id="dataview-search-input" placeholder="Search" name="search" value="{{searchString}}" autofocus="autofocus">
+					<button type="button" id="dataview-search-button" class="btn btn-primary">
+						<span class="fa fa-search">
+						</span>
+					</button>
+				</div>
+				{{/if}}
+			</div>
+			<div id="dataview-controls-export" class="form-group">
+				{{#if isNotEmpty}}
+		{{#if isFound}}
+				<div>
+				</div>
+				{{else}}
+				<div class="btn-group">
+					<button type="button" class="btn btn-default" id="dataview-export-default">
+						Export
+					</button>
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						<span class="caret">
+						</span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li>
+							<a href="#" id="dataview-export-csv">
+								Export to CSV
+							</a>
+						</li>
+						<li>
+							<a href="#" id="dataview-export-tsv">
+								Export to TSV
+							</a>
+						</li>
+						<li>
+							<a href="#" id="dataview-export-json">
+								Export to JSON
+							</a>
+						</li>
+					</ul>
+				</div>
+				{{/if}}
+	{{/if}}
+			</div>
+		</form>
+		{{#if isNotEmpty}}
+			{{#if isNotFound}}
+		<div class="alert alert-warning">
+			"{{searchString}}" not found.
+		</div>
+		{{else}}
+		<div id="dataview-data">
+			{{#if viewAsTable}} {{> ProjectsListTable}} {{/if}}
+		</div>
+		{{/if}}
+		{{else}}
+		<div class="alert alert-info">
+			No data here
+		</div>
+		{{/if}}
+	</div>
+</template>
+
+<template name="ProjectsListTable">
+	<table id="dataview-table" class="table table-striped">
+		<thead id="dataview-table-header">
+			<tr id="dataview-table-header-row">
+				<th class="th-sortable" data-sort="pj_name">
+					Project Name
+				</th>
+				<th class="th-sortable" data-sort="customerid">
+					customerid
+				</th>
+				<th class="th-sortable" data-sort="pj_start_date">
+					Start Date
+				</th>
+				<th class="th-sortable" data-sort="pj_due_date">
+					Due Date
+				</th>
+				<th class="th-sortable" data-sort="pj_priority">
+					Priority
+				</th>
+				<th class="th-sortable" data-sort="pj_brief">
+					Brief
+				</th>
+				<th class="th-sortable" data-sort="pj_description">
+					Description
+				</th>
+				<th class="th-sortable" data-sort="pj_skills">
+					Skills Required
+				</th>
+				<th class="th-sortable" data-sort="pj_type">
+					Project Type
+				</th>
+				<th class="th-sortable" data-sort="pj_task_count">
+					Task Count
+				</th>
+				<th class="th-sortable" data-sort="pj_tasks_complete">
+					Tasks Complete
+				</th>
+				<th class="th-sortable" data-sort="pj_tasks_pending">
+					Tasks Pending
+				</th>
+				<th class="th-sortable" data-sort="pj_budget">
+					Budget
+				</th>
+				<th>
+					&nbsp;
+				</th>
+				<th>
+					&nbsp;
+				</th>
+			</tr>
+		</thead>
+		<tbody id="dataview-table-items">
+			{{#each tableItems}} {{> ProjectsListTableItems}} {{/each}}
+		</tbody>
+	</table>
+</template>
+
+<template name="ProjectsListTableItems">
+	<tr id="dataview-table-items-row">
+		<td>
+			{{pj_name}}
+		</td>
+		<td>
+			{{customerid}}
+		</td>
+		<td>
+			{{formatDate pj_start_date ''}}
+		</td>
+		<td>
+			{{formatDate pj_due_date ''}}
+		</td>
+		<td>
+			{{pj_priority}}
+		</td>
+		<td>
+			{{pj_brief}}
+		</td>
+		<td>
+			{{pj_description}}
+		</td>
+		<td>
+			{{pj_skills}}
+		</td>
+		<td>
+			{{pj_type}}
+		</td>
+		<td>
+			{{pj_task_count}}
+		</td>
+		<td>
+			{{pj_tasks_complete}}
+		</td>
+		<td>
+			{{pj_tasks_pending}}
+		</td>
+		<td>
+			{{pj_budget}}
+		</td>
+		<td class="td-icon">
+			<span id="edit-button" class="fa fa-pencil {{editButtonClass}}" title="Edit">
+			</span>
+		</td>
+		<td class="td-icon">
+			<span id="delete-button" class="fa fa-trash-o {{deleteButtonClass}}" title="Delete">
+			</span>
+		</td>
+	</tr>
+</template>
+

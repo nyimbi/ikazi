@@ -1,0 +1,282 @@
+<template name="Tasks">
+	<div class="page-container container" id="content">
+		<div class="row" id="title_row">
+			<div class="col-md-12">
+				<h2 id="page_title" class="pull-left">
+					<span class="fa fa-gears">
+					</span>
+					&nbsp;Tasks
+				</h2>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> TasksList}}
+	</div>
+</template>
+
+<template name="TasksList">
+	<div id="tasks-list" class="">
+		<form id="dataview-controls" class="form-inline">
+			<div id="dataview-controls-insert" class="form-group {{insertButtonClass}}">
+				<button type="submit" id="dataview-insert-button" class="btn btn-success">
+					<span class="fa fa-plus">
+					</span>
+					Add new
+				</button>
+			</div>
+			<div id="dataview-controls-search">
+				{{#if isNotEmpty}}
+				<div id="dataview-controls-search-group" class="form-group">
+					<label class="sr-only" for="search">
+						Search
+					</label>
+					<input type="text" class="form-control" id="dataview-search-input" placeholder="Search" name="search" value="{{searchString}}" autofocus="autofocus">
+					<button type="button" id="dataview-search-button" class="btn btn-primary">
+						<span class="fa fa-search">
+						</span>
+					</button>
+				</div>
+				{{/if}}
+			</div>
+			<div id="dataview-controls-export" class="form-group">
+				{{#if isNotEmpty}}
+		{{#if isFound}}
+				<div>
+				</div>
+				{{else}}
+				<div class="btn-group">
+					<button type="button" class="btn btn-default" id="dataview-export-default">
+						Export
+					</button>
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						<span class="caret">
+						</span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li>
+							<a href="#" id="dataview-export-csv">
+								Export to CSV
+							</a>
+						</li>
+						<li>
+							<a href="#" id="dataview-export-tsv">
+								Export to TSV
+							</a>
+						</li>
+						<li>
+							<a href="#" id="dataview-export-json">
+								Export to JSON
+							</a>
+						</li>
+					</ul>
+				</div>
+				{{/if}}
+	{{/if}}
+			</div>
+		</form>
+		{{#if isNotEmpty}}
+			{{#if isNotFound}}
+		<div class="alert alert-warning">
+			"{{searchString}}" not found.
+		</div>
+		{{else}}
+		<div id="dataview-data">
+			{{#if viewAsTable}} {{> TasksListTable}} {{/if}}
+		</div>
+		{{/if}}
+		{{else}}
+		<div class="alert alert-info">
+			No data here
+		</div>
+		{{/if}}
+	</div>
+</template>
+
+<template name="TasksListTable">
+	<table id="dataview-table" class="table table-striped">
+		<thead id="dataview-table-header">
+			<tr id="dataview-table-header-row">
+				<th class="th-sortable" data-sort="task_guid">
+					Task ID
+				</th>
+				<th class="th-sortable" data-sort="pj_id">
+					Project ID
+				</th>
+				<th class="th-sortable" data-sort="task_seq">
+					Sequence
+				</th>
+				<th class="th-sortable" data-sort="task_name">
+					Name
+				</th>
+				<th class="th-sortable" data-sort="task_data">
+					Task Data
+				</th>
+				<th class="th-sortable" data-sort="task_data_type">
+					Data Type
+				</th>
+				<th class="th-sortable" data-sort="task_start">
+					Start Time
+				</th>
+				<th class="th-sortable" data-sort="task_end">
+					End Time
+				</th>
+				<th class="th-sortable" data-sort="task_complete">
+					Complete
+				</th>
+				<th class="th-sortable" data-sort="task_in_process">
+					In Process
+				</th>
+				<th class="th-sortable" data-sort="task_assigned">
+					Assigned
+				</th>
+				<th class="th-sortable" data-sort="task_booked">
+					Booked
+				</th>
+				<th class="th-sortable" data-sort="task_worker">
+					Worker
+				</th>
+				<th class="th-sortable" data-sort="task_output">
+					Output
+				</th>
+				<th class="th-sortable" data-sort="task_quality">
+					Quality
+				</th>
+				<th class="th-sortable" data-sort="task_rejected">
+					Rejected
+				</th>
+				<th class="th-sortable" data-sort="task_accepted">
+					Accepted
+				</th>
+				<th class="th-sortable" data-sort="task_under_review">
+					Under Review
+				</th>
+				<th class="th-sortable" data-sort="task_difficulty_rating">
+					Difficulty Rating
+				</th>
+				<th class="th-sortable" data-sort="task_grp">
+					Task Group
+				</th>
+				<th class="th-sortable" data-sort="task_pj">
+					Project
+				</th>
+				<th class="th-sortable" data-sort="task_value">
+					Value
+				</th>
+				<th class="th-sortable" data-sort="task_value_hi">
+					Hi Value
+				</th>
+				<th class="th-sortable" data-sort="task_value_lo">
+					Lo Value
+				</th>
+				<th class="th-sortable" data-sort="task_tags">
+					Tags
+				</th>
+				<th class="th-sortable" data-sort="task_priority">
+					Priority
+				</th>
+				<th>
+					&nbsp;
+				</th>
+				<th>
+					&nbsp;
+				</th>
+			</tr>
+		</thead>
+		<tbody id="dataview-table-items">
+			{{#each tableItems}} {{> TasksListTableItems}} {{/each}}
+		</tbody>
+	</table>
+</template>
+
+<template name="TasksListTableItems">
+	<tr id="dataview-table-items-row">
+		<td>
+			{{task_guid}}
+		</td>
+		<td>
+			{{pj_id}}
+		</td>
+		<td>
+			{{task_seq}}
+		</td>
+		<td>
+			{{task_name}}
+		</td>
+		<td>
+			{{task_data}}
+		</td>
+		<td>
+			{{task_data_type}}
+		</td>
+		<td>
+			{{secondsToTime task_start ''}}
+		</td>
+		<td>
+			{{secondsToTime task_end ''}}
+		</td>
+		<td>
+			{{task_complete}}
+		</td>
+		<td>
+			{{task_in_process}}
+		</td>
+		<td>
+			{{task_assigned}}
+		</td>
+		<td>
+			{{task_booked}}
+		</td>
+		<td>
+			{{task_worker}}
+		</td>
+		<td>
+			{{task_output}}
+		</td>
+		<td>
+			{{task_quality}}
+		</td>
+		<td>
+			{{task_rejected}}
+		</td>
+		<td>
+			{{task_accepted}}
+		</td>
+		<td>
+			{{task_under_review}}
+		</td>
+		<td>
+			{{task_difficulty_rating}}
+		</td>
+		<td>
+			{{task_grp}}
+		</td>
+		<td>
+			{{task_pj}}
+		</td>
+		<td>
+			{{task_value}}
+		</td>
+		<td>
+			{{task_value_hi}}
+		</td>
+		<td>
+			{{task_value_lo}}
+		</td>
+		<td>
+			{{task_tags}}
+		</td>
+		<td>
+			{{task_priority}}
+		</td>
+		<td class="td-icon">
+			<span id="edit-button" class="fa fa-pencil {{editButtonClass}}" title="Edit">
+			</span>
+		</td>
+		<td class="td-icon">
+			<span id="delete-button" class="fa fa-trash-o {{deleteButtonClass}}" title="Delete">
+			</span>
+		</td>
+	</tr>
+</template>
+

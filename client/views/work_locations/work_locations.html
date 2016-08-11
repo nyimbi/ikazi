@@ -1,0 +1,333 @@
+<template name="WorkLocations">
+	<div class="page-container container" id="content">
+		<div class="row" id="title_row">
+			<div class="col-md-12">
+				<h2 id="page_title" class="pull-left">
+					<span class="fa fa-building-o">
+					</span>
+					&nbsp;Work locations
+				</h2>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		<p id="page_text">
+			Work Locations
+		</p>
+		{{> WorkLocationsList}}
+	</div>
+</template>
+
+<template name="WorkLocationsList">
+	<div id="work-locations-list" class="">
+		<form id="dataview-controls" class="form-inline">
+			<div id="dataview-controls-insert" class="form-group {{insertButtonClass}}">
+				<button type="submit" id="dataview-insert-button" class="btn btn-success">
+					<span class="fa fa-plus">
+					</span>
+					Add new
+				</button>
+			</div>
+			<div id="dataview-controls-search">
+				{{#if isNotEmpty}}
+				<div id="dataview-controls-search-group" class="form-group">
+					<label class="sr-only" for="search">
+						Search
+					</label>
+					<input type="text" class="form-control" id="dataview-search-input" placeholder="Search" name="search" value="{{searchString}}" autofocus="autofocus">
+					<button type="button" id="dataview-search-button" class="btn btn-primary">
+						<span class="fa fa-search">
+						</span>
+					</button>
+				</div>
+				{{/if}}
+			</div>
+			<div id="dataview-controls-export" class="form-group">
+				{{#if isNotEmpty}}
+		{{#if isFound}}
+				<div>
+				</div>
+				{{else}}
+				<div class="btn-group">
+					<button type="button" class="btn btn-default" id="dataview-export-default">
+						Export
+					</button>
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						<span class="caret">
+						</span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li>
+							<a href="#" id="dataview-export-csv">
+								Export to CSV
+							</a>
+						</li>
+						<li>
+							<a href="#" id="dataview-export-tsv">
+								Export to TSV
+							</a>
+						</li>
+						<li>
+							<a href="#" id="dataview-export-json">
+								Export to JSON
+							</a>
+						</li>
+					</ul>
+				</div>
+				{{/if}}
+	{{/if}}
+			</div>
+		</form>
+		{{#if isNotEmpty}}
+			{{#if isNotFound}}
+		<div class="alert alert-warning">
+			"{{searchString}}" not found.
+		</div>
+		{{else}}
+		<div id="dataview-data">
+			{{#if viewAsTable}} {{> WorkLocationsListTable}} {{/if}}
+		</div>
+		{{/if}}
+		{{else}}
+		<div class="alert alert-info">
+			No data here
+		</div>
+		{{/if}}
+	</div>
+</template>
+
+<template name="WorkLocationsListTable">
+	<table id="dataview-table" class="table table-striped">
+		<thead id="dataview-table-header">
+			<tr id="dataview-table-header-row">
+				<th class="th-sortable" data-sort="wl_lat">
+					Lat.
+				</th>
+				<th class="th-sortable" data-sort="wl_lon">
+					Lon.
+				</th>
+				<th class="th-sortable" data-sort="wl_name">
+					Name
+				</th>
+				<th class="th-sortable" data-sort="wl_pic1">
+					Picture (1)
+				</th>
+				<th class="th-sortable" data-sort="wl_pic2">
+					Picture (2)
+				</th>
+				<th class="th-sortable" data-sort="wl_pic3">
+					Picture (3)
+				</th>
+				<th class="th-sortable" data-sort="wl_rooms">
+					Number of Rooms
+				</th>
+				<th class="th-sortable" data-sort="wl_net_how">
+					Internet (how)
+				</th>
+				<th class="th-sortable" data-sort="wl_notes">
+					Notes
+				</th>
+				<th class="th-sortable" data-sort="wl_mgr_name">
+					Mgr. Name
+				</th>
+				<th class="th-sortable" data-sort="wl_mgr_phone">
+					Manager Phone
+				</th>
+				<th class="th-sortable" data-sort="wl_mgr_email">
+					Mgr. Email
+				</th>
+				<th class="th-sortable" data-sort="wl_mgr_facebook">
+					Mgr. Facebook
+				</th>
+				<th class="th-sortable" data-sort="wl_mgr_gplus">
+					Google+
+				</th>
+				<th class="th-sortable" data-sort="wl_website">
+					Website
+				</th>
+				<th class="th-sortable" data-sort="wl_twitter">
+					Twitter
+				</th>
+				<th class="th-sortable" data-sort="wl_mgr_twitter">
+					Mgr. Twitter
+				</th>
+				<th class="th-sortable" data-sort="wl_open_time">
+					Opening Time
+				</th>
+				<th class="th-sortable" data-sort="wl_close_time">
+					Closing Time
+				</th>
+				<th class="th-sortable" data-sort="wl_power_src">
+					Power Source
+				</th>
+				<th class="th-sortable" data-sort="wl_county">
+					County
+				</th>
+				<th class="th-sortable" data-sort="wl_city">
+					City
+				</th>
+				<th class="th-sortable" data-sort="wl_district">
+					District
+				</th>
+				<th class="th-sortable" data-sort="wl_nearest_police">
+					Nearest Police Station
+				</th>
+				<th class="th-sortable" data-sort="wl_police_phone">
+					Police Phone No
+				</th>
+				<th class="th-sortable" data-sort="wl_police_ocpd_nm">
+					OCPD Name
+				</th>
+				<th class="th-sortable" data-sort="wl_ocpd_phone">
+					OCPD Phone
+				</th>
+				<th class="th-sortable" data-sort="wl_ocs_nm">
+					OCS Name
+				</th>
+				<th class="th-sortable" data-sort="wl_ocs_phone">
+					OCS Phone
+				</th>
+				<th class="th-sortable" data-sort="wl_comp_no">
+					Number of Computers
+				</th>
+				<th class="th-sortable" data-sort="wl_wifi">
+					Has Wifi?
+				</th>
+				<th class="th-sortable" data-sort="wl_ssid">
+					Wifi SSID
+				</th>
+				<th class="th-sortable" data-sort="wl_wifi_passwd">
+					Wifi Password
+				</th>
+				<th class="th-sortable" data-sort="wl_notes">
+					Notes
+				</th>
+				<th>
+					&nbsp;
+				</th>
+				<th>
+					&nbsp;
+				</th>
+			</tr>
+		</thead>
+		<tbody id="dataview-table-items">
+			{{#each tableItems}} {{> WorkLocationsListTableItems}} {{/each}}
+		</tbody>
+	</table>
+</template>
+
+<template name="WorkLocationsListTableItems">
+	<tr id="dataview-table-items-row">
+		<td>
+			{{wl_lat}}
+		</td>
+		<td>
+			{{wl_lon}}
+		</td>
+		<td>
+			{{wl_name}}
+		</td>
+		<td>
+			{{wl_pic1}}
+		</td>
+		<td>
+			{{wl_pic2}}
+		</td>
+		<td>
+			{{wl_pic3}}
+		</td>
+		<td>
+			{{wl_rooms}}
+		</td>
+		<td>
+			{{wl_net_how}}
+		</td>
+		<td>
+			{{wl_notes}}
+		</td>
+		<td>
+			{{wl_mgr_name}}
+		</td>
+		<td>
+			{{wl_mgr_phone}}
+		</td>
+		<td>
+			{{wl_mgr_email}}
+		</td>
+		<td>
+			{{wl_mgr_facebook}}
+		</td>
+		<td>
+			{{wl_mgr_gplus}}
+		</td>
+		<td>
+			{{wl_website}}
+		</td>
+		<td>
+			{{wl_twitter}}
+		</td>
+		<td>
+			{{wl_mgr_twitter}}
+		</td>
+		<td>
+			{{secondsToTime wl_open_time ''}}
+		</td>
+		<td>
+			{{secondsToTime wl_close_time ''}}
+		</td>
+		<td>
+			{{wl_power_src}}
+		</td>
+		<td>
+			{{wl_county}}
+		</td>
+		<td>
+			{{wl_city}}
+		</td>
+		<td>
+			{{wl_district}}
+		</td>
+		<td>
+			{{wl_nearest_police}}
+		</td>
+		<td>
+			{{wl_police_phone}}
+		</td>
+		<td>
+			{{wl_police_ocpd_nm}}
+		</td>
+		<td>
+			{{wl_ocpd_phone}}
+		</td>
+		<td>
+			{{wl_ocs_nm}}
+		</td>
+		<td>
+			{{wl_ocs_phone}}
+		</td>
+		<td>
+			{{wl_comp_no}}
+		</td>
+		<td>
+			{{wl_wifi}}
+		</td>
+		<td>
+			{{wl_ssid}}
+		</td>
+		<td>
+			{{wl_wifi_passwd}}
+		</td>
+		<td>
+			{{wl_notes}}
+		</td>
+		<td class="td-icon">
+			<span id="edit-button" class="fa fa-pencil {{editButtonClass}}" title="Edit">
+			</span>
+		</td>
+		<td class="td-icon">
+			<span id="delete-button" class="fa fa-trash-o {{deleteButtonClass}}" title="Delete">
+			</span>
+		</td>
+	</tr>
+</template>
+

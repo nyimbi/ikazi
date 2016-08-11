@@ -1,0 +1,180 @@
+<template name="Payments">
+	<div class="page-container container" id="content">
+		<div class="row" id="title_row">
+			<div class="col-md-12">
+				<h2 id="page_title" class="pull-left">
+					<span class="fa fa-usd">
+					</span>
+					&nbsp;Payments
+				</h2>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> PaymentsList}}
+	</div>
+</template>
+
+<template name="PaymentsList">
+	<div id="payments-list" class="">
+		<form id="dataview-controls" class="form-inline">
+			<div id="dataview-controls-insert" class="form-group {{insertButtonClass}}">
+				<button type="submit" id="dataview-insert-button" class="btn btn-success">
+					<span class="fa fa-plus">
+					</span>
+					Add new
+				</button>
+			</div>
+			<div id="dataview-controls-search">
+				{{#if isNotEmpty}}
+				<div id="dataview-controls-search-group" class="form-group">
+					<label class="sr-only" for="search">
+						Search
+					</label>
+					<input type="text" class="form-control" id="dataview-search-input" placeholder="Search" name="search" value="{{searchString}}" autofocus="autofocus">
+					<button type="button" id="dataview-search-button" class="btn btn-primary">
+						<span class="fa fa-search">
+						</span>
+					</button>
+				</div>
+				{{/if}}
+			</div>
+			<div id="dataview-controls-export" class="form-group">
+				{{#if isNotEmpty}}
+		{{#if isFound}}
+				<div>
+				</div>
+				{{else}}
+				<div class="btn-group">
+					<button type="button" class="btn btn-default" id="dataview-export-default">
+						Export
+					</button>
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						<span class="caret">
+						</span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li>
+							<a href="#" id="dataview-export-csv">
+								Export to CSV
+							</a>
+						</li>
+						<li>
+							<a href="#" id="dataview-export-tsv">
+								Export to TSV
+							</a>
+						</li>
+						<li>
+							<a href="#" id="dataview-export-json">
+								Export to JSON
+							</a>
+						</li>
+					</ul>
+				</div>
+				{{/if}}
+	{{/if}}
+			</div>
+		</form>
+		{{#if isNotEmpty}}
+			{{#if isNotFound}}
+		<div class="alert alert-warning">
+			"{{searchString}}" not found.
+		</div>
+		{{else}}
+		<div id="dataview-data">
+			{{#if viewAsTable}} {{> PaymentsListTable}} {{/if}}
+		</div>
+		{{/if}}
+		{{else}}
+		<div class="alert alert-info">
+			No data here
+		</div>
+		{{/if}}
+	</div>
+</template>
+
+<template name="PaymentsListTable">
+	<table id="dataview-table" class="table table-striped">
+		<thead id="dataview-table-header">
+			<tr id="dataview-table-header-row">
+				<th class="th-sortable" data-sort="pay_req_date">
+					Pay_req_date
+				</th>
+				<th class="th-sortable" data-sort="pay_req_amount">
+					Pay_req_amount
+				</th>
+				<th class="th-sortable" data-sort="pay_req_story">
+					Pay_req_story
+				</th>
+				<th class="th-sortable" data-sort="paid">
+					Paid
+				</th>
+				<th class="th-sortable" data-sort="debit">
+					Debit
+				</th>
+				<th class="th-sortable" data-sort="credit">
+					Credit
+				</th>
+				<th class="th-sortable" data-sort="paid_date">
+					Paid_date
+				</th>
+				<th class="th-sortable" data-sort="paid_how">
+					Paid_how
+				</th>
+				<th class="th-sortable" data-sort="paid_to">
+					Paid To
+				</th>
+				<th>
+					&nbsp;
+				</th>
+				<th>
+					&nbsp;
+				</th>
+			</tr>
+		</thead>
+		<tbody id="dataview-table-items">
+			{{#each tableItems}} {{> PaymentsListTableItems}} {{/each}}
+		</tbody>
+	</table>
+</template>
+
+<template name="PaymentsListTableItems">
+	<tr id="dataview-table-items-row">
+		<td>
+			{{formatDate pay_req_date ''}}
+		</td>
+		<td>
+			{{pay_req_amount}}
+		</td>
+		<td>
+			{{pay_req_story}}
+		</td>
+		<td>
+			<input type="checkbox" class="inline-checkbox {{editButtonClass}}" data-field="paid" {{checked paid}}>
+		</td>
+		<td>
+			{{debit}}
+		</td>
+		<td>
+			{{credit}}
+		</td>
+		<td>
+			{{formatDate paid_date ''}}
+		</td>
+		<td>
+			{{paid_how}}
+		</td>
+		<td>
+			{{paid_to}}
+		</td>
+		<td class="td-icon">
+			<span id="edit-button" class="fa fa-pencil {{editButtonClass}}" title="Edit">
+			</span>
+		</td>
+		<td class="td-icon">
+			<span id="delete-button" class="fa fa-trash-o {{deleteButtonClass}}" title="Delete">
+			</span>
+		</td>
+	</tr>
+</template>
+

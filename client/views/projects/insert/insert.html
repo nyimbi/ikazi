@@ -1,0 +1,212 @@
+<template name="ProjectsInsert">
+	<div class="page-container container" id="content">
+		<div class="row" id="title_row">
+			<div class="col-md-12">
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> ProjectsInsertForm}}
+	</div>
+</template>
+
+<template name="ProjectsInsertForm">
+	<div id="projects-insert-form" class="">
+		<h2 id="component-title">
+			Insert
+		</h2>
+		<form role="form">
+			{{#if errorMessage}}
+			<div class="alert alert-warning">
+				{{errorMessage}}
+			</div>
+			{{/if}}
+
+			{{#if infoMessage}}
+			<div class="alert alert-success">
+				{{infoMessage}}
+			</div>
+			{{/if}}
+			<div class="form-group  field-pj_name">
+				<label for="pj_name">
+					Project Name
+				</label>
+				<div class="input-div">
+					<input type="text" name="pj_name" value="" class="form-control " autofocus="autofocus" data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-customerid">
+				<label for="customerid">
+				</label>
+				<div class="input-div">
+					<input type="text" name="customerid" value="" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-pj_start_date">
+				<label for="pj_start_date">
+					Start Date
+				</label>
+				<div class="input-div">
+					<div class="input-group date">
+						<input type="text" name="pj_start_date" value="" class="form-control " data-type="date">
+						<span class="input-group-addon">
+							<i class="fa fa-calendar">
+							</i>
+						</span>
+					</div>
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-pj_due_date">
+				<label for="pj_due_date">
+					Due Date
+				</label>
+				<div class="input-div">
+					<div class="input-group date">
+						<input type="text" name="pj_due_date" value="" class="form-control " data-type="date">
+						<span class="input-group-addon">
+							<i class="fa fa-calendar">
+							</i>
+						</span>
+					</div>
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-pj_priority">
+				<label for="pj_priority">
+					Priority
+				</label>
+				<div class="input-div">
+					<input type="text" name="pj_priority" value="" class="form-control " data-type="integer">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-pj_brief">
+				<label for="pj_brief">
+					Brief
+				</label>
+				<div class="input-div">
+					<textarea class="form-control " name="pj_brief"></textarea>
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-pj_description">
+				<label for="pj_description">
+					Description
+				</label>
+				<div class="input-div">
+					<textarea class="form-control " name="pj_description"></textarea>
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-pj_skills">
+				<label for="pj_skills">
+					Skills Required
+				</label>
+				<div class="input-div">
+					<input type="text" name="pj_skills" value="" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-pj_type">
+				<label for="pj_type">
+					Project Type
+				</label>
+				<div class="input-div">
+					<input type="text" name="pj_type" value="" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-pj_task_count">
+				<label for="pj_task_count">
+					Task Count
+				</label>
+				<div class="input-div">
+					<input type="text" name="pj_task_count" value="" class="form-control " data-type="integer">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-pj_tasks_complete">
+				<label for="pj_tasks_complete">
+					Tasks Complete
+				</label>
+				<div class="input-div">
+					<input type="text" name="pj_tasks_complete" value="" class="form-control " data-type="bool">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-pj_tasks_pending">
+				<label for="pj_tasks_pending">
+					Tasks Pending
+				</label>
+				<div class="input-div">
+					<input type="text" name="pj_tasks_pending" value="" class="form-control " data-type="integer">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-pj_budget">
+				<label for="pj_budget">
+					Budget
+				</label>
+				<div class="input-div">
+					<input type="text" name="pj_budget" value="" class="form-control " data-type="float">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="submit-div">
+					<button id="form-submit-button" class="btn btn-success" type="submit">
+						<span class="fa fa-check">
+						</span>
+						Save
+					</button>
+					<a href="#" id="form-cancel-button" class="btn btn-default">
+						Cancel
+					</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</template>
+

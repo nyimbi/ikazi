@@ -1,0 +1,37 @@
+<template name="HomePrivate">
+	<div class="page-container container" id="content">
+		<div class="row" id="title_row">
+			<div class="col-md-12">
+				<h2 id="page_title" class="pull-left">
+					<span class="fa fa-home">
+					</span>
+					&nbsp;Welcome {{userFullName}}!
+				</h2>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> HomePrivateHomePrivJumbotron}}
+	</div>
+</template>
+
+<template name="HomePrivateHomePrivJumbotron">
+	<div class="jumbotron ">
+		<div id="content" class="container">
+			<h1 id="component-title">
+				<span class="fa fa-cog">
+				</span>
+				You are logged in.
+			</h1>
+			<p id="jumbotron-text">
+				Thank you for logging in {{userFirstName}}. Please go to tasks and select something to work on. The Ajira Mircowork Platform, work when you need it.
+			</p>
+			<p id="jumbotron-button">
+				<a href="#" class="btn btn btn-primary btn-lg" role="button">
+					:-) Off to work
+				</a>
+			</p>
+		</div>
+	</div>
+</template>
+

@@ -1,0 +1,882 @@
+{
+	"output_files": [
+		{
+			"path": "client/views/router.js",
+			"checksum": "bb1df32b4d3bb07bd53dafcffce627ea2a6b902a"
+		},
+		{
+			"path": "server/controllers/router.js",
+			"checksum": "f9d076cc64b65aa4ce85d9ca7272d8cfefc46694"
+		},
+		{
+			"path": "both/collections/customers.js",
+			"checksum": "359b4d3b1f2b33735ad3c50c868cf0617890a31e"
+		},
+		{
+			"path": "server/collections/customers.js",
+			"checksum": "eaf54177642dc9ba18cb9c7df68d91b3739f8074"
+		},
+		{
+			"path": "server/publish/customers.js",
+			"checksum": "298ada0aa79ecb0a24f64a80a1c691f8efa0f876"
+		},
+		{
+			"path": "both/collections/projects.js",
+			"checksum": "ba9c9c8fcacf492e3e2282cee010c1f5639744cf"
+		},
+		{
+			"path": "server/collections/projects.js",
+			"checksum": "33ef98d3413cc78a5ff1fe3929f0595bf5085daf"
+		},
+		{
+			"path": "server/publish/projects.js",
+			"checksum": "1cfa8f516fc8234ad12f88a3d948a5626d3111ef"
+		},
+		{
+			"path": "both/collections/tasks.js",
+			"checksum": "57bf12953a441e1df2e1a732d1cd04f4390e56b2"
+		},
+		{
+			"path": "server/collections/tasks.js",
+			"checksum": "edbf511f34acc113732d50f4b0a5fcf8d82d0732"
+		},
+		{
+			"path": "server/publish/tasks.js",
+			"checksum": "13c7a7bf4348a10264b7a9936ede72348bee0847"
+		},
+		{
+			"path": "both/collections/earnings.js",
+			"checksum": "e331b3232dd7f4a64a54d46dae497efeec57cba9"
+		},
+		{
+			"path": "server/collections/earnings.js",
+			"checksum": "128bbcbef1f42a8a9d7b12c96173c16768f43d96"
+		},
+		{
+			"path": "server/publish/earnings.js",
+			"checksum": "9720b619701d16db41540a1b60f3d42c534c2d1b"
+		},
+		{
+			"path": "both/collections/payments.js",
+			"checksum": "8953ee366b205e4bbde3ecede043e4c66a0e8178"
+		},
+		{
+			"path": "server/collections/payments.js",
+			"checksum": "ca76ff9bbc3e943619f6f74f2004ae64377eb340"
+		},
+		{
+			"path": "server/publish/payments.js",
+			"checksum": "8b66742543b0276bdd9f6c2a2d6eca076d6db713"
+		},
+		{
+			"path": "both/collections/work_sources.js",
+			"checksum": "0cf7be57bbf061a9b732ebe33d80c3862d958203"
+		},
+		{
+			"path": "server/collections/work_sources.js",
+			"checksum": "0cc158cb3bb98e9700b1eb218df0b5e189379635"
+		},
+		{
+			"path": "server/publish/work_sources.js",
+			"checksum": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+		},
+		{
+			"path": "both/collections/work_locs.js",
+			"checksum": "d5659fcab5d7c834b9af0503d00f566f636ad944"
+		},
+		{
+			"path": "server/collections/work_locs.js",
+			"checksum": "11eac1d5cb1e652c9763cf30be60466446f5e4e5"
+		},
+		{
+			"path": "server/publish/work_locs.js",
+			"checksum": "41f52e8dd7ce1d331c6f384629c00f72206d2a8d"
+		},
+		{
+			"path": "both/collections/courses.js",
+			"checksum": "648e108b9327d1c9ea4ad096a2b6d7ca487345b6"
+		},
+		{
+			"path": "server/collections/courses.js",
+			"checksum": "13fa54b89e2f0f268e0a338f1e9dc13c0812df18"
+		},
+		{
+			"path": "server/publish/courses.js",
+			"checksum": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+		},
+		{
+			"path": "both/collections/data_files.js",
+			"checksum": "2794611699b81dd1fc83e0ce0786a992a32a5616"
+		},
+		{
+			"path": "server/collections/data_files.js",
+			"checksum": "51e77c02d79c694ecff204256d8a5852c3f81b13"
+		},
+		{
+			"path": "server/publish/data_files.js",
+			"checksum": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+		},
+		{
+			"path": "both/joins/joins.js",
+			"checksum": "2106798acdff33faeced6af9fb17368458dfab6f"
+		},
+		{
+			"path": "client/client.js",
+			"checksum": "7af2b5d358dd268813562aa999cf961d8cd65656"
+		},
+		{
+			"path": "server/server.js",
+			"checksum": "a8d938455262e710f64054b8f6b90f012111ccf7"
+		},
+		{
+			"path": "client/views/not_found/not_found.html",
+			"checksum": "df91b51c0a4787a26c4a7ea8ad72ca8310f72b41"
+		},
+		{
+			"path": "client/views/not_found/not_found.js",
+			"checksum": "bf34ff3cc2a0d6f8b0d89aeda53df4022c053ef2"
+		},
+		{
+			"path": "client/views/loading/loading.html",
+			"checksum": "99e97ba60ddf18b9ed3977aa1f73b1fe3494922a"
+		},
+		{
+			"path": "client/views/loading/loading.js",
+			"checksum": "bc00c4247b7fe203147498423fd8b3f002e889b3"
+		},
+		{
+			"path": "client/styles/styles/theme/bootswatch.import.less",
+			"checksum": "88e8741fd7ee9e0575f9ed55397379ac8204c20e"
+		},
+		{
+			"path": "client/styles/styles/theme/theme.import.less",
+			"checksum": "69c15c1eddd29ab13aed997fee441b0e1c35fe60"
+		},
+		{
+			"path": "client/styles/styles/theme/themefix.import.less",
+			"checksum": "218efa4a548fc82cb380fa98d49a5692f6837d45"
+		},
+		{
+			"path": "client/styles/styles/theme/variables.import.less",
+			"checksum": "2908d5caea610a915b0eb7123f65c45dfb111d73"
+		},
+		{
+			"path": "client/styles/styles/styles.less",
+			"checksum": "671f2c3059deb13a70e27908d38f08b591452630"
+		},
+		{
+			"path": "client/views/layout/layout.html",
+			"checksum": "dd512bea4df244736f281ecf78c0cf0415189915"
+		},
+		{
+			"path": "client/views/layout/layout.js",
+			"checksum": "50811d69dbaa828e614bf28f7c100360d14e22c8"
+		},
+		{
+			"path": "client/views/home_public/home_public.html",
+			"checksum": "ca0397cf6bcf5b58ebdd79775ac0031b909f7e4c"
+		},
+		{
+			"path": "client/views/home_public/home_public.js",
+			"checksum": "ffb0abeb7efb70a8454c761a0cf3641a05a99385"
+		},
+		{
+			"path": "client/views/home_public/home_public_controller.js",
+			"checksum": "a74fe8e593e0287c07d5c739d696b2117e6e709a"
+		},
+		{
+			"path": "client/views/login/login.html",
+			"checksum": "89f980c834a5a82c438fb393e2ee3e3cff98f1bc"
+		},
+		{
+			"path": "client/views/login/login.js",
+			"checksum": "b7e9a60037aa5802bc578766785d0c44077413d7"
+		},
+		{
+			"path": "client/views/login/login_controller.js",
+			"checksum": "bb5224a58563fa3c11fa61c29f56eaf884768aa3"
+		},
+		{
+			"path": "client/views/register/register.html",
+			"checksum": "6f6a9f30c8dbeaf9c31335ab089db1bbe4aefacb"
+		},
+		{
+			"path": "client/views/register/register.js",
+			"checksum": "ddc87a28c127d55081a9f72d3179871f5da78d54"
+		},
+		{
+			"path": "client/views/register/register_controller.js",
+			"checksum": "e04c321a9f410c8ea1c2ff703da1542d75942745"
+		},
+		{
+			"path": "client/views/forgot_password/forgot_password.html",
+			"checksum": "d28a61ac325a7ee0fbdf8f805a11ffd9f488f219"
+		},
+		{
+			"path": "client/views/forgot_password/forgot_password.js",
+			"checksum": "994833a0afc45536b5e7f3672c012f3bd62e6d95"
+		},
+		{
+			"path": "client/views/forgot_password/forgot_password_controller.js",
+			"checksum": "4fa77c07252926439e800a7d5b98e79090d20e77"
+		},
+		{
+			"path": "client/views/reset_password/reset_password.html",
+			"checksum": "59b305ffe597317a5f904dd3321aa6ef0d82ba33"
+		},
+		{
+			"path": "client/views/reset_password/reset_password.js",
+			"checksum": "7036563282f11299d6aca62fa04cf26d730dd995"
+		},
+		{
+			"path": "client/views/reset_password/reset_password_controller.js",
+			"checksum": "08c7d6e06c13fbb5716b78629c8c1782571ad266"
+		},
+		{
+			"path": "client/views/home_private/home_private.html",
+			"checksum": "02c46a3870054ab73da6a61f84c594b0f268a434"
+		},
+		{
+			"path": "client/views/home_private/home_private.js",
+			"checksum": "bd9b5120cc03f1b21ad61647c9279e029234b281"
+		},
+		{
+			"path": "client/views/home_private/home_private_controller.js",
+			"checksum": "55f59969d6597968c2f9b41543c2eea7f1fbd266"
+		},
+		{
+			"path": "client/views/customers/customers.html",
+			"checksum": "30ee2443ccea91eb1086e69520b952971f8f69b8"
+		},
+		{
+			"path": "client/views/customers/customers.js",
+			"checksum": "e3fff52aeb011a945986507c31a7624a2e3f2e15"
+		},
+		{
+			"path": "client/views/customers/customers_controller.js",
+			"checksum": "54341ee18531ebfd9fe4956e613ee41a6ae44464"
+		},
+		{
+			"path": "client/views/customers/insert/insert.html",
+			"checksum": "608ac5bf97e66b4ca6d14ca1a2a55164024327e1"
+		},
+		{
+			"path": "client/views/customers/insert/insert.js",
+			"checksum": "dfdaaf04a7bf37649290fc6a3f6f438adb8fe6d0"
+		},
+		{
+			"path": "client/views/customers/insert/insert_controller.js",
+			"checksum": "ec2e3da36ccde306e8bb50873fa480a6307c6a43"
+		},
+		{
+			"path": "client/views/customers/edit/edit.html",
+			"checksum": "5571e6e64d71835b9c4fe15a6c1c5a96f47404b2"
+		},
+		{
+			"path": "client/views/customers/edit/edit.js",
+			"checksum": "bf8c3db96664a9b7733d98aaf571a4f28cda2071"
+		},
+		{
+			"path": "client/views/customers/edit/edit_controller.js",
+			"checksum": "c09fbdee56f9308d575cb44e1f975f6cc775acae"
+		},
+		{
+			"path": "client/views/projects/projects.html",
+			"checksum": "f55b0e03f8a6dd7600c45491f78a241f6742c094"
+		},
+		{
+			"path": "client/views/projects/projects.js",
+			"checksum": "478e186419d733780c0d01a0b7e94ff1d4d90d6c"
+		},
+		{
+			"path": "client/views/projects/projects_controller.js",
+			"checksum": "f7d930e59d6dc1cd9d77f4a8b1098998bd8c688d"
+		},
+		{
+			"path": "client/views/projects/insert/insert.html",
+			"checksum": "173702e351c45f65515fa8984fe9de1c762962f0"
+		},
+		{
+			"path": "client/views/projects/insert/insert.js",
+			"checksum": "4b6761b3dd959344d3abe7b48f6c289c0c4119c6"
+		},
+		{
+			"path": "client/views/projects/insert/insert_controller.js",
+			"checksum": "8579db161c1c29af038de6c36ce5a0d3ef3eafad"
+		},
+		{
+			"path": "client/views/projects/edit/edit.html",
+			"checksum": "7d1a071ba5bdc4809cdcd230e71b13e5e9c7efaa"
+		},
+		{
+			"path": "client/views/projects/edit/edit.js",
+			"checksum": "aab6b6e13cffefa43bc8bd6704cfd0a3030f213a"
+		},
+		{
+			"path": "client/views/projects/edit/edit_controller.js",
+			"checksum": "dfe5268932d9abd2edda6f78b59ac9fa86d69cf3"
+		},
+		{
+			"path": "client/views/tasks/tasks.html",
+			"checksum": "84631f1d2e5ab066015c3f79e8ca1cee80e0bdc0"
+		},
+		{
+			"path": "client/views/tasks/tasks.js",
+			"checksum": "718fc11cc8e4ae84934a61697b4ab1afcea085f7"
+		},
+		{
+			"path": "client/views/tasks/tasks_controller.js",
+			"checksum": "a43b718d5c4bec983c1f601260ddba011bd16616"
+		},
+		{
+			"path": "client/views/tasks/insert/insert.html",
+			"checksum": "f2b2e2e17736caec132aefdaf84d43a1ea5d1391"
+		},
+		{
+			"path": "client/views/tasks/insert/insert.js",
+			"checksum": "970c18033183ce7c86a3bea5b8404555456e908c"
+		},
+		{
+			"path": "client/views/tasks/insert/insert_controller.js",
+			"checksum": "82f04b6dc64bdbc7fa8982a7a3dd82e26f482c06"
+		},
+		{
+			"path": "client/views/tasks/edit/edit.html",
+			"checksum": "0f80d5c8826ccce1aba02589aac70e27b16fa21c"
+		},
+		{
+			"path": "client/views/tasks/edit/edit.js",
+			"checksum": "e58221a7b92e30471adc59699b3cf138642c040d"
+		},
+		{
+			"path": "client/views/tasks/edit/edit_controller.js",
+			"checksum": "3f09afd2895caa74dfd00ce8d890119fd8cc40f4"
+		},
+		{
+			"path": "client/views/earning/earning.html",
+			"checksum": "0465f777d42d2d4ce0be896590b29feb1d4c7f02"
+		},
+		{
+			"path": "client/views/earning/earning.js",
+			"checksum": "02c6ff91e6af11dc949dced690bef874ca01e3a2"
+		},
+		{
+			"path": "client/views/earning/earning_controller.js",
+			"checksum": "497562b7633a7cef44982a66acf987aee19de995"
+		},
+		{
+			"path": "client/views/earning/insert/insert.html",
+			"checksum": "c8018a780f04eabc42cbf25aa3d1ab579c2073eb"
+		},
+		{
+			"path": "client/views/earning/insert/insert.js",
+			"checksum": "49fc965a01d3143584a5f4563b056670f521fe20"
+		},
+		{
+			"path": "client/views/earning/insert/insert_controller.js",
+			"checksum": "4c6a0e71a750ffda2bad2b414f1978339eedc42d"
+		},
+		{
+			"path": "client/views/earning/edit/edit.html",
+			"checksum": "54c2f5603318d9b2411edf97f065e070de56ba87"
+		},
+		{
+			"path": "client/views/earning/edit/edit.js",
+			"checksum": "e7bdd9162950209446c201551732ac4b0aec9d6a"
+		},
+		{
+			"path": "client/views/earning/edit/edit_controller.js",
+			"checksum": "93753b3d531efff3347fb32af2a0e7c5e5b0224f"
+		},
+		{
+			"path": "client/views/payments/payments.html",
+			"checksum": "ed647ad8a88e1bd071dd634ddae7205384394cc2"
+		},
+		{
+			"path": "client/views/payments/payments.js",
+			"checksum": "06b1a7fc55ceb31f04c4c6f8dd5346be5ec3c642"
+		},
+		{
+			"path": "client/views/payments/payments_controller.js",
+			"checksum": "c31f2306e583b386b0e8df993fa9207eff65ec3e"
+		},
+		{
+			"path": "client/views/payments/insert/insert.html",
+			"checksum": "27fb6ab0c329989779f5d7cb6e39d9a8a6d22cc6"
+		},
+		{
+			"path": "client/views/payments/insert/insert.js",
+			"checksum": "d0178a3c757f0983e760de0357786f59e4c091e0"
+		},
+		{
+			"path": "client/views/payments/insert/insert_controller.js",
+			"checksum": "f62907f3aab6f45ba98865d5578ec7ded4b10fed"
+		},
+		{
+			"path": "client/views/payments/edit/edit.html",
+			"checksum": "a6a62c541ed14b022595ac929bffda7af75e927a"
+		},
+		{
+			"path": "client/views/payments/edit/edit.js",
+			"checksum": "df0d027c787bb39336313a9c76fb83c5c12ecb36"
+		},
+		{
+			"path": "client/views/payments/edit/edit_controller.js",
+			"checksum": "f4abfb46d0fc88036703a2712b5503e5c0313ea6"
+		},
+		{
+			"path": "client/views/work_locations/work_locations.html",
+			"checksum": "4157b631402f07e943bf635db33b87c202dff7c2"
+		},
+		{
+			"path": "client/views/work_locations/work_locations.js",
+			"checksum": "50c590ae7c9750ffa9299f58ad5d9639205f627c"
+		},
+		{
+			"path": "client/views/work_locations/work_locations_controller.js",
+			"checksum": "b6af2c97eafb93f0d525381f0cd44f7b677e0725"
+		},
+		{
+			"path": "client/views/work_locations/insert/insert.html",
+			"checksum": "6b60e3123b90adb2291a6b724d96c4a33ce78cc3"
+		},
+		{
+			"path": "client/views/work_locations/insert/insert.js",
+			"checksum": "dd183d918d337148be7b291ab0558b4970df7243"
+		},
+		{
+			"path": "client/views/work_locations/insert/insert_controller.js",
+			"checksum": "074e67f2a9e5c5b5acaf75dacad625fc82e59003"
+		},
+		{
+			"path": "client/views/work_locations/edit/edit.html",
+			"checksum": "0a695f212d701e3345140e3b9190082ee3867eb1"
+		},
+		{
+			"path": "client/views/work_locations/edit/edit.js",
+			"checksum": "ea5725a5d416d764501868560ad57bbff9bbc39f"
+		},
+		{
+			"path": "client/views/work_locations/edit/edit_controller.js",
+			"checksum": "c98548f88b1b0b8162c2b6397f855bd8a2340f8c"
+		},
+		{
+			"path": "client/views/about/about.html",
+			"checksum": "64d4d2f8c9bdb477cd59b7f92212b74056895df1"
+		},
+		{
+			"path": "client/views/about/about.js",
+			"checksum": "4242501e95b73744e1d3be38ebdabcf8553452c4"
+		},
+		{
+			"path": "client/views/about/about_controller.js",
+			"checksum": "ada4d587cef511f4d48a6b882eebaad8fb38403f"
+		},
+		{
+			"path": "client/views/user_settings/user_settings.html",
+			"checksum": "3c101f0f6024ebe3b50a776250d87b51adc616cd"
+		},
+		{
+			"path": "client/views/user_settings/user_settings.js",
+			"checksum": "1a59cb411053c21be67135bc0f4d118a5deaef65"
+		},
+		{
+			"path": "client/views/user_settings/user_settings_controller.js",
+			"checksum": "a5071a5cef7951f1dae75852dc95177689ecd806"
+		},
+		{
+			"path": "client/views/user_settings/profile/profile.html",
+			"checksum": "935088c708d561a122ce2cf09597046d87d0b3f2"
+		},
+		{
+			"path": "client/views/user_settings/profile/profile.js",
+			"checksum": "f3f862107d3e4158c2b58f993846973db62fb6a3"
+		},
+		{
+			"path": "client/views/user_settings/profile/profile_controller.js",
+			"checksum": "1c37c6368d51445cf5ccf2d5b551c96353ed4050"
+		},
+		{
+			"path": "client/views/user_settings/profile/social_prof/social_prof.html",
+			"checksum": "cb3640a5630ee1af721aadffd60f5629e125b840"
+		},
+		{
+			"path": "client/views/user_settings/profile/social_prof/social_prof.js",
+			"checksum": "4b2a5959f2581347183c69d10474eee35491f779"
+		},
+		{
+			"path": "client/views/user_settings/profile/social_prof/social_prof_controller.js",
+			"checksum": "ee3ed7e855bc67c63a06f8ce2383baed9daf90af"
+		},
+		{
+			"path": "client/views/user_settings/profile/contact/contact.html",
+			"checksum": "8009c7679d29161e94804fbcc49947e2fddb7de0"
+		},
+		{
+			"path": "client/views/user_settings/profile/contact/contact.js",
+			"checksum": "7970de0e6ae5f7650a87ff0209a9c690f99644b4"
+		},
+		{
+			"path": "client/views/user_settings/profile/contact/contact_controller.js",
+			"checksum": "9df2d312fc79dfb2b91a36d72af1ef86e9a017de"
+		},
+		{
+			"path": "client/views/user_settings/profile/edu_prof/edu_prof.html",
+			"checksum": "d2953a5e8f5305bb4625feab9084900bff626cff"
+		},
+		{
+			"path": "client/views/user_settings/profile/edu_prof/edu_prof.js",
+			"checksum": "83a5eb663acd7001b732fe3e250a7848e15a29de"
+		},
+		{
+			"path": "client/views/user_settings/profile/edu_prof/edu_prof_controller.js",
+			"checksum": "77a05cdb2bc407954ac268826634d3ae4cb1ef79"
+		},
+		{
+			"path": "client/views/user_settings/profile/bio_prof/bio_prof.html",
+			"checksum": "dc78f2452642fcf6062607efb95d8d4050628b8f"
+		},
+		{
+			"path": "client/views/user_settings/profile/bio_prof/bio_prof.js",
+			"checksum": "57ef6eface680b4f09243b50fc5e8f7386c588a3"
+		},
+		{
+			"path": "client/views/user_settings/profile/bio_prof/bio_prof_controller.js",
+			"checksum": "e67afe97fc157ea58a48852fbfc59e5d44cc40ed"
+		},
+		{
+			"path": "client/views/user_settings/change_pass/change_pass.html",
+			"checksum": "33e7602afe9295992e2968e9e2f8efd93e3d761a"
+		},
+		{
+			"path": "client/views/user_settings/change_pass/change_pass.js",
+			"checksum": "dd724c2e82320ea720749f9174e6474721637274"
+		},
+		{
+			"path": "client/views/user_settings/change_pass/change_pass_controller.js",
+			"checksum": "71ca8f89ee004189fcdb8600ec07b83c7ad8a192"
+		},
+		{
+			"path": "client/views/logout/logout.html",
+			"checksum": "588f499d73f7800a154cabc117eb1787db586d82"
+		},
+		{
+			"path": "client/views/logout/logout.js",
+			"checksum": "b722e0c225298f6468baf1a25f202fc79f7c7463"
+		},
+		{
+			"path": "client/views/logout/logout_controller.js",
+			"checksum": "d1db0d31bbaef77ad9693a18d59871cab34a30ef"
+		},
+		{
+			"path": "client/views/admin_page/admin_page.html",
+			"checksum": "eabed363a20ae78737cba3083d2c788c79e03133"
+		},
+		{
+			"path": "client/views/admin_page/admin_page.js",
+			"checksum": "1efb419e252490b842219a9a0aae1af6dd94c889"
+		},
+		{
+			"path": "client/views/admin_page/admin_page_controller.js",
+			"checksum": "9aa111554d69acb1ea492774b4a27749057f0b05"
+		},
+		{
+			"path": "client/views/admin_page/users/users.html",
+			"checksum": "b4e581c17a9c214451883088b57d9ec972e1976a"
+		},
+		{
+			"path": "client/views/admin_page/users/users.js",
+			"checksum": "6a694ce84f8bddd203bc3a58451b0dc309597ec2"
+		},
+		{
+			"path": "client/views/admin_page/users/users_controller.js",
+			"checksum": "8eff27ea694e38171fc107a619d97db646a8128c"
+		},
+		{
+			"path": "client/views/admin_page/users/details/details.html",
+			"checksum": "c46d4b0e46b168d013678461a73a389496e5696f"
+		},
+		{
+			"path": "client/views/admin_page/users/details/details.js",
+			"checksum": "b830c2ed7f317ec1c9efd2a823c0296d4902f57a"
+		},
+		{
+			"path": "client/views/admin_page/users/details/details_controller.js",
+			"checksum": "2180f8f688eec609f1147f5819ce2d6640232616"
+		},
+		{
+			"path": "client/views/admin_page/users/insert/insert.html",
+			"checksum": "bb42b96cf9c574c4c171d266cab6420035465f6d"
+		},
+		{
+			"path": "client/views/admin_page/users/insert/insert.js",
+			"checksum": "e6bec49cb36689b85407f47954d7895ded6f28d3"
+		},
+		{
+			"path": "client/views/admin_page/users/insert/insert_controller.js",
+			"checksum": "7a4ebbacd52105cbc4051a0e37a64f6649d325c1"
+		},
+		{
+			"path": "client/views/admin_page/users/edit/edit.html",
+			"checksum": "ad23b45e608709798c7ecec816e01e69abdcdea3"
+		},
+		{
+			"path": "client/views/admin_page/users/edit/edit.js",
+			"checksum": "cbe0f5a52720da72d12c361a48dd5b6d1299f4c1"
+		},
+		{
+			"path": "client/views/admin_page/users/edit/edit_controller.js",
+			"checksum": "b73bd600f4eec0019e8ff3ce472568691b468948"
+		},
+		{
+			"path": "client/views/admin_page/collections_page/collections_page.html",
+			"checksum": "4ea849e89b75de3276607c0e11655b7e22c87736"
+		},
+		{
+			"path": "client/views/admin_page/collections_page/collections_page.js",
+			"checksum": "3ed2136c9defe1af94e454c42bbd437b1fc8539d"
+		},
+		{
+			"path": "client/views/admin_page/collections_page/collections_page_controller.js",
+			"checksum": "99b3db6901fa0b558ff2487a5494c6cd1b9a2d60"
+		},
+		{
+			"path": "client/views/admin_page/banks_page/banks_page.html",
+			"checksum": "a6db435b4bc67ad54c36c48ac9a435747733e313"
+		},
+		{
+			"path": "client/views/admin_page/banks_page/banks_page.js",
+			"checksum": "8a3f30b69a8048a1e68dc0e34cf6eec49920784d"
+		},
+		{
+			"path": "client/views/admin_page/banks_page/banks_page_controller.js",
+			"checksum": "842fe63547fb121e14eeffd585acea2a9bba399d"
+		},
+		{
+			"path": "client/views/admin_page/scripts_page/scripts_page.html",
+			"checksum": "1f9687dd6448042edce0865784294785a0e8536c"
+		},
+		{
+			"path": "client/views/admin_page/scripts_page/scripts_page.js",
+			"checksum": "02956d982f9e22a51f4bfdf4cfbec44c9652bbcb"
+		},
+		{
+			"path": "client/views/admin_page/scripts_page/scripts_page_controller.js",
+			"checksum": "a38bb9180d5680e13ddb447503605f5d85bb181b"
+		},
+		{
+			"path": "client/views/admin_page/params_page/params_page.html",
+			"checksum": "dead681fed463dea25d4f08613d78b3b58a5c7f0"
+		},
+		{
+			"path": "client/views/admin_page/params_page/params_page.js",
+			"checksum": "71f1127af7c5439e66d4754f7c6e659da3fee4e4"
+		},
+		{
+			"path": "client/views/admin_page/params_page/params_page_controller.js",
+			"checksum": "627d56a7d2733ae5d3c7d0853591713efc9ca346"
+		},
+		{
+			"path": "lib/string_utils.js",
+			"checksum": "6bf8f64bf32bd7aff71cbeeba23df9fb8282a12c"
+		},
+		{
+			"path": "lib/object_utils.js",
+			"checksum": "33c6d536bb2256c097cf72ed503e769528265e2f"
+		},
+		{
+			"path": "client/lib/http_utils.js",
+			"checksum": "740095219b687a460a789da9ab9ef4d64a111b9c"
+		},
+		{
+			"path": "client/styles/framework/bootstrap3/custom.bootstrap.import.less",
+			"checksum": "8007cd69773c1c62284460f7c0fd8310e7f60094"
+		},
+		{
+			"path": "client/styles/framework/bootstrap3/custom.bootstrap.json",
+			"checksum": "59c3803dde72dfd34e95a52dc4f5cae65018ec38"
+		},
+		{
+			"path": "client/styles/framework/bootstrap3/custom.bootstrap.less",
+			"checksum": "a114a65d406f228e4137a3fb7b33047c40a5cd68"
+		},
+		{
+			"path": "client/styles/framework/bootstrap3/custom.bootstrap.mixins.import.less",
+			"checksum": "b53332a4c7dffc57aefda1db82b4e09258dad07a"
+		},
+		{
+			"path": "client/styles/framework/bootstrap3-plugins/bootstrap-fileinput/fileinput.css",
+			"checksum": "30ba45c948bcb125cf0cb550b4a9d2f13ffcc710"
+		},
+		{
+			"path": "client/styles/framework/bootstrap3-plugins/bootstrap-fileinput/fileinput.js",
+			"checksum": "b6c83cb478c232284b8b6cae90d0ec2840d93332"
+		},
+		{
+			"path": "client/styles/framework/bootstrap3-plugins/bootstrap-fileinput/fileinput_locale_cz.js",
+			"checksum": "146a2a2bd0e89b62b775eee929907970e875ddf6"
+		},
+		{
+			"path": "client/styles/framework/bootstrap3-plugins/bootstrap-fileinput/fileinput_locale_de.js",
+			"checksum": "fcad7c9406cb7ab1959ee5a62825a62b905f34a2"
+		},
+		{
+			"path": "client/styles/framework/bootstrap3-plugins/bootstrap-fileinput/fileinput_locale_el.js",
+			"checksum": "d00eebe17389c41dbdfdd5611573ba52169f16eb"
+		},
+		{
+			"path": "client/styles/framework/bootstrap3-plugins/bootstrap-fileinput/fileinput_locale_es.js",
+			"checksum": "6eb5775359ee3e6199962d05fb6a2ddf79426766"
+		},
+		{
+			"path": "client/styles/framework/bootstrap3-plugins/bootstrap-fileinput/fileinput_locale_fr.js",
+			"checksum": "aea834881f99fe187153560b32011c2af7f56092"
+		},
+		{
+			"path": "client/styles/framework/bootstrap3-plugins/bootstrap-fileinput/fileinput_locale_hu.js",
+			"checksum": "500bfd774110b73e07e9f4e23a4cbf9c896fbcea"
+		},
+		{
+			"path": "client/styles/framework/bootstrap3-plugins/bootstrap-fileinput/fileinput_locale_it.js",
+			"checksum": "09d41c11dadf15f197bd443f5ad01a68e3408bde"
+		},
+		{
+			"path": "client/styles/framework/bootstrap3-plugins/bootstrap-fileinput/fileinput_locale_LANG.js",
+			"checksum": "e80901eda8d09ee66e3375ddd6d7f7a53dbfcda8"
+		},
+		{
+			"path": "client/styles/framework/bootstrap3-plugins/bootstrap-fileinput/fileinput_locale_nl.js",
+			"checksum": "106dfa775832df6830675c8927603a813063986c"
+		},
+		{
+			"path": "client/styles/framework/bootstrap3-plugins/bootstrap-fileinput/fileinput_locale_pl.js",
+			"checksum": "77ce969c9532dc4cda50d57bad7c8e8c9e792386"
+		},
+		{
+			"path": "client/styles/framework/bootstrap3-plugins/bootstrap-fileinput/fileinput_locale_pt-BR.js",
+			"checksum": "8caeab2c4b40a90eba4412eb5a31c76405e5a04a"
+		},
+		{
+			"path": "client/styles/framework/bootstrap3-plugins/bootstrap-fileinput/fileinput_locale_pt.js",
+			"checksum": "f1d3b0c83a6a10b6e1cd7b8f523a98a7a51720ac"
+		},
+		{
+			"path": "client/styles/framework/bootstrap3-plugins/bootstrap-fileinput/fileinput_locale_ro.js",
+			"checksum": "7fcbd870c67fbd4646b6b53c4e07f84ebaf6ebd1"
+		},
+		{
+			"path": "client/styles/framework/bootstrap3-plugins/bootstrap-fileinput/fileinput_locale_ru.js",
+			"checksum": "4939e4b72d235b9a68602aba3501bd72bde77611"
+		},
+		{
+			"path": "client/styles/framework/bootstrap3-plugins/bootstrap-fileinput/fileinput_locale_sk.js",
+			"checksum": "1dc9d65243156006cf762ed85cdf36501c27f38a"
+		},
+		{
+			"path": "client/styles/framework/bootstrap3-plugins/bootstrap-fileinput/fileinput_locale_sr.js",
+			"checksum": "50ac58590814ab9959e34d94a4b2bb8cf9be35b9"
+		},
+		{
+			"path": "client/styles/framework/bootstrap3-plugins/bootstrap-fileinput/fileinput_locale_th.js",
+			"checksum": "05fec04f2b334bd579126eeb54321fbec516470f"
+		},
+		{
+			"path": "client/styles/framework/bootstrap3-plugins/bootstrap-fileinput/fileinput_locale_tr.js",
+			"checksum": "25e2ea3f23c594180a3496f814ae907343de1add"
+		},
+		{
+			"path": "client/styles/framework/bootstrap3-plugins/bootstrap-fileinput/fileinput_locale_uk.js",
+			"checksum": "f5f6b5052a111fa87a5da8608a5d137d4116e6c5"
+		},
+		{
+			"path": "client/styles/framework/bootstrap3-plugins/bootstrap-fileinput/fileinput_locale_zh.js",
+			"checksum": "f477aede4974871fc0ba71d3ed4f90d8b9f1a74e"
+		},
+		{
+			"path": "client/styles/framework/bootstrap3-plugins/bootstrap-tagsinput/bootstrap-tagsinput.css",
+			"checksum": "49937990ee001ae632d23d1e9bb71dc4460ac7c1"
+		},
+		{
+			"path": "client/styles/framework/bootstrap3-plugins/bootstrap-tagsinput/bootstrap-tagsinput.js",
+			"checksum": "4d941e8119dcf9b140347d647b925800cb7ef319"
+		},
+		{
+			"path": "client/lib/form_utils.js",
+			"checksum": "ac523c7384145b2d294b67946bf07b63c69cfe4e"
+		}
+	],
+	"output_directories": [
+		"client/",
+		"client/lib/",
+		"client/styles/",
+		"client/styles/framework/",
+		"client/styles/styles/",
+		"client/styles/styles/theme/",
+		"client/views/",
+		"client/views/not_found/",
+		"client/views/loading/",
+		"client/views/layout/",
+		"lib/",
+		"settings/",
+		"packages/",
+		"both/",
+		"both/lib/",
+		"both/collections/",
+		"both/joins/",
+		"public/",
+		"public/images/",
+		"public/fonts/",
+		"private/",
+		"server/",
+		"server/lib/",
+		"server/collections/",
+		"server/publish/",
+		"server/controllers/",
+		"server/methods/",
+		"client/views/home_public/",
+		"client/views/login/",
+		"client/views/register/",
+		"client/views/forgot_password/",
+		"client/views/reset_password/",
+		"client/views/home_private/",
+		"client/views/customers/",
+		"client/views/customers/insert/",
+		"client/views/customers/edit/",
+		"client/views/projects/",
+		"client/views/projects/insert/",
+		"client/views/projects/edit/",
+		"client/views/tasks/",
+		"client/views/tasks/insert/",
+		"client/views/tasks/edit/",
+		"client/views/earning/",
+		"client/views/earning/insert/",
+		"client/views/earning/edit/",
+		"client/views/payments/",
+		"client/views/payments/insert/",
+		"client/views/payments/edit/",
+		"client/views/work_locations/",
+		"client/views/work_locations/insert/",
+		"client/views/work_locations/edit/",
+		"client/views/about/",
+		"client/views/user_settings/",
+		"client/views/user_settings/profile/",
+		"client/views/user_settings/profile/social_prof/",
+		"client/views/user_settings/profile/contact/",
+		"client/views/user_settings/profile/edu_prof/",
+		"client/views/user_settings/profile/bio_prof/",
+		"client/views/user_settings/change_pass/",
+		"client/views/logout/",
+		"client/views/admin_page/",
+		"client/views/admin_page/users/",
+		"client/views/admin_page/users/details/",
+		"client/views/admin_page/users/insert/",
+		"client/views/admin_page/users/edit/",
+		"client/views/admin_page/collections_page/",
+		"client/views/admin_page/banks_page/",
+		"client/views/admin_page/scripts_page/",
+		"client/views/admin_page/params_page/",
+		"client/styles/framework/bootstrap3/",
+		"client/styles/framework/bootstrap3-plugins/bootstrap-fileinput/",
+		"client/styles/framework/bootstrap3-plugins/bootstrap-tagsinput/"
+	]
+}

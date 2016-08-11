@@ -1,0 +1,453 @@
+<template name="WorkLocationsInsert">
+	<div class="page-container container" id="content">
+		<div class="row" id="title_row">
+			<div class="col-md-12">
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> WorkLocationsInsertForm}}
+	</div>
+</template>
+
+<template name="WorkLocationsInsertForm">
+	<div id="work-locations-insert-form" class="">
+		<h2 id="component-title">
+			Insert
+		</h2>
+		<form role="form">
+			{{#if errorMessage}}
+			<div class="alert alert-warning">
+				{{errorMessage}}
+			</div>
+			{{/if}}
+
+			{{#if infoMessage}}
+			<div class="alert alert-success">
+				{{infoMessage}}
+			</div>
+			{{/if}}
+			<div class="form-group  field-wl_lat">
+				<label for="wl_lat">
+					Lat.
+				</label>
+				<div class="input-div">
+					<input type="text" name="wl_lat" value="" class="form-control " autofocus="autofocus" data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-wl_lon">
+				<label for="wl_lon">
+					Lon.
+				</label>
+				<div class="input-div">
+					<input type="text" name="wl_lon" value="" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-wl_name">
+				<label for="wl_name">
+					Name
+				</label>
+				<div class="input-div">
+					<input type="text" name="wl_name" value="" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-wl_pic1">
+				<label for="wl_pic1">
+					Picture (1)
+				</label>
+				<div class="input-div">
+					<input type="text" name="wl_pic1" value="" class="form-control " data-type="object">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-wl_pic2">
+				<label for="wl_pic2">
+					Picture (2)
+				</label>
+				<div class="input-div">
+					<input type="text" name="wl_pic2" value="" class="form-control " data-type="object">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-wl_pic3">
+				<label for="wl_pic3">
+					Picture (3)
+				</label>
+				<div class="input-div">
+					<input type="text" name="wl_pic3" value="" class="form-control " data-type="object">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-wl_rooms">
+				<label for="wl_rooms">
+					Number of Rooms
+				</label>
+				<div class="input-div">
+					<input type="text" name="wl_rooms" value="" class="form-control " data-type="integer">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-wl_net_how">
+				<label for="wl_net_how">
+					Internet (how)
+				</label>
+				<div class="input-div">
+					<input type="text" name="wl_net_how" value="" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-wl_notes">
+				<label for="wl_notes">
+					Notes
+				</label>
+				<div class="input-div">
+					<textarea class="form-control " name="wl_notes"></textarea>
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-wl_mgr_name">
+				<label for="wl_mgr_name">
+					Mgr. Name
+				</label>
+				<div class="input-div">
+					<input type="text" name="wl_mgr_name" value="" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-wl_mgr_phone">
+				<label for="wl_mgr_phone">
+					Manager Phone
+				</label>
+				<div class="input-div">
+					<input type="text" name="wl_mgr_phone" value="" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-wl_mgr_email">
+				<label for="wl_mgr_email">
+					Mgr. Email
+				</label>
+				<div class="input-div">
+					<input type="text" name="wl_mgr_email" value="" class="form-control " data-type="email">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-wl_mgr_facebook">
+				<label for="wl_mgr_facebook">
+					Mgr. Facebook
+				</label>
+				<div class="input-div">
+					<input type="text" name="wl_mgr_facebook" value="" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-wl_mgr_gplus">
+				<label for="wl_mgr_gplus">
+					Google+
+				</label>
+				<div class="input-div">
+					<input type="text" name="wl_mgr_gplus" value="" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-wl_website">
+				<label for="wl_website">
+					Website
+				</label>
+				<div class="input-div">
+					<input type="text" name="wl_website" value="" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-wl_twitter">
+				<label for="wl_twitter">
+					Twitter
+				</label>
+				<div class="input-div">
+					<input type="text" name="wl_twitter" value="" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-wl_mgr_twitter">
+				<label for="wl_mgr_twitter">
+					Mgr. Twitter
+				</label>
+				<div class="input-div">
+					<input type="text" name="wl_mgr_twitter" value="" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-wl_open_time">
+				<label for="wl_open_time">
+					Opening Time
+				</label>
+				<div class="input-div">
+					<input type="text" name="wl_open_time" value="" class="form-control " data-type="time">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-wl_close_time">
+				<label for="wl_close_time">
+					Closing Time
+				</label>
+				<div class="input-div">
+					<input type="text" name="wl_close_time" value="" class="form-control " data-type="time">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-wl_power_src">
+				<label for="wl_power_src">
+					Power Source
+				</label>
+				<div class="input-div">
+					<input type="text" name="wl_power_src" value="" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-wl_county">
+				<label for="wl_county">
+					County
+				</label>
+				<div class="input-div">
+					<input type="text" name="wl_county" value="" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-wl_city">
+				<label for="wl_city">
+					City
+				</label>
+				<div class="input-div">
+					<input type="text" name="wl_city" value="" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-wl_district">
+				<label for="wl_district">
+					District
+				</label>
+				<div class="input-div">
+					<input type="text" name="wl_district" value="" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-wl_nearest_police">
+				<label for="wl_nearest_police">
+					Nearest Police Station
+				</label>
+				<div class="input-div">
+					<input type="text" name="wl_nearest_police" value="" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-wl_police_phone">
+				<label for="wl_police_phone">
+					Police Phone No
+				</label>
+				<div class="input-div">
+					<input type="text" name="wl_police_phone" value="" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-wl_police_ocpd_nm">
+				<label for="wl_police_ocpd_nm">
+					OCPD Name
+				</label>
+				<div class="input-div">
+					<input type="text" name="wl_police_ocpd_nm" value="" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-wl_ocpd_phone">
+				<label for="wl_ocpd_phone">
+					OCPD Phone
+				</label>
+				<div class="input-div">
+					<input type="text" name="wl_ocpd_phone" value="" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-wl_ocs_nm">
+				<label for="wl_ocs_nm">
+					OCS Name
+				</label>
+				<div class="input-div">
+					<input type="text" name="wl_ocs_nm" value="" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-wl_ocs_phone">
+				<label for="wl_ocs_phone">
+					OCS Phone
+				</label>
+				<div class="input-div">
+					<input type="text" name="wl_ocs_phone" value="" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-wl_comp_no">
+				<label for="wl_comp_no">
+					Number of Computers
+				</label>
+				<div class="input-div">
+					<input type="text" name="wl_comp_no" value="" class="form-control " data-type="integer">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-wl_wifi">
+				<label for="wl_wifi">
+					Has Wifi?
+				</label>
+				<div class="input-div">
+					<input type="text" name="wl_wifi" value="" class="form-control " data-type="bool">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-wl_ssid">
+				<label for="wl_ssid">
+					Wifi SSID
+				</label>
+				<div class="input-div">
+					<input type="text" name="wl_ssid" value="" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-wl_wifi_passwd">
+				<label for="wl_wifi_passwd">
+					Wifi Password
+				</label>
+				<div class="input-div">
+					<input type="text" name="wl_wifi_passwd" value="" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-wl_notes">
+				<label for="wl_notes">
+					Notes
+				</label>
+				<div class="input-div">
+					<textarea class="form-control " name="wl_notes"></textarea>
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="submit-div">
+					<button id="form-submit-button" class="btn btn-success" type="submit">
+						<span class="fa fa-check">
+						</span>
+						Save
+					</button>
+					<a href="#" id="form-cancel-button" class="btn btn-default">
+						Cancel
+					</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</template>
+

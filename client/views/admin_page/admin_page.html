@@ -1,0 +1,76 @@
+<template name="AdminPage">
+	<div class="page-container container">
+		<div class="row">
+			<div class="col-md-12" id="content">
+				<div class="row" id="title_row">
+					<div class="col-md-12">
+						<div id="page_menu" class="pull-right">
+						</div>
+					</div>
+				</div>
+				<p id="page_text">
+					User Administration
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12" id="menu">
+				{{> AdminPageAdminSideMenu}}
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12" id="subcontent">
+				{{> yield region='AdminPageSubcontent'}}
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="AdminPageAdminSideMenu">
+	<ul id="menu-items" class="nav nav-stacked nav-pills">
+		<li id="menu-item-simple" class="{{menuItemClass 'admin_page.users'}}">
+			<a href="{{pathFor 'admin_page.users'}}">
+				<span class="item-title">
+					Users
+				</span>
+			</a>
+		</li>
+		<li id="menu-item-simple" class="{{menuItemClass 'admin_page.collections_page'}}">
+			<a href="{{pathFor 'admin_page.collections_page'}}">
+				<span class="fa fa-briefcase">
+				</span>
+				<span class="item-title">
+					&nbsp;Collections
+				</span>
+			</a>
+		</li>
+		<li id="menu-item-simple" class="{{menuItemClass 'admin_page.banks_page'}}">
+			<a href="{{pathFor 'admin_page.banks_page'}}">
+				<span class="fa fa-bank">
+				</span>
+				<span class="item-title">
+					&nbsp;Banks Setup
+				</span>
+			</a>
+		</li>
+		<li id="menu-item-simple" class="{{menuItemClass 'admin_page.scripts_page'}}">
+			<a href="{{pathFor 'admin_page.scripts_page'}}">
+				<span class="fa fa-industry">
+				</span>
+				<span class="item-title">
+					&nbsp;Scripts
+				</span>
+			</a>
+		</li>
+		<li id="menu-item-simple" class="{{menuItemClass 'admin_page.params_page'}}">
+			<a href="{{pathFor 'admin_page.params_page'}}">
+				<span class="fa fa-magic">
+				</span>
+				<span class="item-title">
+					&nbsp;Parameters
+				</span>
+			</a>
+		</li>
+	</ul>
+</template>
+

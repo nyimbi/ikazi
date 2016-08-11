@@ -1,0 +1,362 @@
+<template name="TasksEdit">
+	<div class="page-container container" id="content">
+		<div class="row" id="title_row">
+			<div class="col-md-12">
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> TasksEditForm}}
+	</div>
+</template>
+
+<template name="TasksEditForm">
+	<div id="tasks-edit-form" class="">
+		<h2 id="component-title">
+			Edit
+		</h2>
+		<form role="form">
+			{{#if errorMessage}}
+			<div class="alert alert-warning">
+				{{errorMessage}}
+			</div>
+			{{/if}}
+
+			{{#if infoMessage}}
+			<div class="alert alert-success">
+				{{infoMessage}}
+			</div>
+			{{/if}}
+			<div class="form-group  field-task_guid">
+				<label for="task_guid">
+					Task ID
+				</label>
+				<div class="input-div">
+					<input type="text" name="task_guid" value="{{tasks_selected.task_guid}}" class="form-control " autofocus="autofocus" data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-pj_id">
+				<label for="pj_id">
+					Project ID
+				</label>
+				<div class="input-div">
+					<input type="text" name="pj_id" value="{{tasks_selected.pj_id}}" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-task_seq">
+				<label for="task_seq">
+					Sequence
+				</label>
+				<div class="input-div">
+					<input type="text" name="task_seq" value="{{tasks_selected.task_seq}}" class="form-control " data-type="integer">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-task_name">
+				<label for="task_name">
+					Name
+				</label>
+				<div class="input-div">
+					<input type="text" name="task_name" value="{{tasks_selected.task_name}}" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-task_data">
+				<label for="task_data">
+					Task Data
+				</label>
+				<div class="input-div">
+					<input type="text" name="task_data" value="{{tasks_selected.task_data}}" class="form-control " data-type="object">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-task_data_type">
+				<label for="task_data_type">
+					Data Type
+				</label>
+				<div class="input-div">
+					<input type="text" name="task_data_type" value="{{tasks_selected.task_data_type}}" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-task_start">
+				<label for="task_start">
+					Start Time
+				</label>
+				<div class="input-div">
+					<input type="text" name="task_start" value="{{secondsToTime tasks_selected.task_start ''}}" class="form-control " data-type="time">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-task_end">
+				<label for="task_end">
+					End Time
+				</label>
+				<div class="input-div">
+					<input type="text" name="task_end" value="{{secondsToTime tasks_selected.task_end ''}}" class="form-control " data-type="time">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-task_complete">
+				<label for="task_complete">
+					Complete
+				</label>
+				<div class="input-div">
+					<input type="text" name="task_complete" value="{{tasks_selected.task_complete}}" class="form-control " data-type="bool">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-task_in_process">
+				<label for="task_in_process">
+					In Process
+				</label>
+				<div class="input-div">
+					<input type="text" name="task_in_process" value="{{tasks_selected.task_in_process}}" class="form-control " data-type="bool">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-task_assigned">
+				<label for="task_assigned">
+					Assigned
+				</label>
+				<div class="input-div">
+					<input type="text" name="task_assigned" value="{{tasks_selected.task_assigned}}" class="form-control " data-type="bool">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-task_booked">
+				<label for="task_booked">
+					Booked
+				</label>
+				<div class="input-div">
+					<input type="text" name="task_booked" value="{{tasks_selected.task_booked}}" class="form-control " data-type="bool">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-task_worker">
+				<label for="task_worker">
+					Worker
+				</label>
+				<div class="input-div">
+					<input type="text" name="task_worker" value="{{tasks_selected.task_worker}}" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-task_output">
+				<label for="task_output">
+					Output
+				</label>
+				<div class="input-div">
+					<input type="text" name="task_output" value="{{tasks_selected.task_output}}" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-task_quality">
+				<label for="task_quality">
+					Quality
+				</label>
+				<div class="input-div">
+					<input type="text" name="task_quality" value="{{tasks_selected.task_quality}}" class="form-control " data-type="integer" data-min="0" data-max="10">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-task_rejected">
+				<label for="task_rejected">
+					Rejected
+				</label>
+				<div class="input-div">
+					<input type="text" name="task_rejected" value="{{tasks_selected.task_rejected}}" class="form-control " data-type="bool">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-task_accepted">
+				<label for="task_accepted">
+					Accepted
+				</label>
+				<div class="input-div">
+					<input type="text" name="task_accepted" value="{{tasks_selected.task_accepted}}" class="form-control " data-type="bool">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-task_under_review">
+				<label for="task_under_review">
+					Under Review
+				</label>
+				<div class="input-div">
+					<input type="text" name="task_under_review" value="{{tasks_selected.task_under_review}}" class="form-control " data-type="bool">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-task_difficulty_rating">
+				<label for="task_difficulty_rating">
+					Difficulty Rating
+				</label>
+				<div class="input-div">
+					<input type="text" name="task_difficulty_rating" value="{{tasks_selected.task_difficulty_rating}}" class="form-control " data-type="integer">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-task_grp">
+				<label for="task_grp">
+					Task Group
+				</label>
+				<div class="input-div">
+					<input type="text" name="task_grp" value="{{tasks_selected.task_grp}}" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-task_pj">
+				<label for="task_pj">
+					Project
+				</label>
+				<div class="input-div">
+					<select class="form-control " name="task_pj" data-type="string">
+					</select>
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-task_value">
+				<label for="task_value">
+					Value
+				</label>
+				<div class="input-div">
+					<input type="text" name="task_value" value="{{tasks_selected.task_value}}" class="form-control " data-type="float" data-min="0.00">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-task_value_hi">
+				<label for="task_value_hi">
+					Hi Value
+				</label>
+				<div class="input-div">
+					<input type="text" name="task_value_hi" value="{{tasks_selected.task_value_hi}}" class="form-control " data-type="float" data-min="0.00">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-task_value_lo">
+				<label for="task_value_lo">
+					Lo Value
+				</label>
+				<div class="input-div">
+					<input type="text" name="task_value_lo" value="{{tasks_selected.task_value_lo}}" class="form-control " data-type="float">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-task_tags">
+				<label for="task_tags">
+					Tags
+				</label>
+				<div class="input-div">
+					<select multiple="multiple" data-role="tagsinput" class="form-control " name="task_tags" data-type="string">
+						{{#each getArray tasks_selected.task_tags}}
+						<option id="form-input-tags-item" value="{{this}}">							{{this}}</option>
+						{{/each}}
+					</select>
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-task_priority">
+				<label for="task_priority">
+					Priority
+				</label>
+				<div class="input-div">
+					<input type="text" name="task_priority" value="{{tasks_selected.task_priority}}" class="form-control " required="required" data-type="integer" data-min="0" data-max="20">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="submit-div">
+					<button id="form-submit-button" class="btn btn-success" type="submit">
+						<span class="fa fa-check">
+						</span>
+						Save
+					</button>
+					<a href="#" id="form-cancel-button" class="btn btn-default">
+						Cancel
+					</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</template>
+

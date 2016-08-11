@@ -1,0 +1,450 @@
+<template name="UserSettingsProfile">
+	<div class="page-container container" id="content">
+		<div class="row" id="title_row">
+			<div class="col-md-12">
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> UserSettingsProfileEditForm}}
+	</div>
+</template>
+
+<template name="UserSettingsProfileEditForm">
+	<div id="user-settings-profile-edit-form" class="">
+		<h2 id="component-title">
+			Edit your profile
+		</h2>
+		<form role="form">
+			{{#if errorMessage}}
+			<div class="alert alert-warning">
+				{{errorMessage}}
+			</div>
+			{{/if}}
+
+			{{#if infoMessage}}
+			<div class="alert alert-success">
+				{{infoMessage}}
+			</div>
+			{{/if}}
+			<div class="form-group  field-profile-name">
+				<label for="profile.name">
+					Name
+				</label>
+				<div class="input-div">
+					<input type="text" name="profile.name" value="{{current_user_data.profile.name}}" class="form-control " autofocus="autofocus" required="required" data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-profile-email">
+				<label for="profile.email">
+					E-mail
+				</label>
+				<div class="input-div">
+					<input type="text" name="profile.email" value="{{current_user_data.profile.email}}" class="form-control " required="required" data-type="email">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-profile-national_id">
+				<label for="profile.national_id">
+					National ID Number
+				</label>
+				<div class="input-div">
+					<input type="text" name="profile.national_id" value="{{current_user_data.profile.national_id}}" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-profile-phone">
+				<label for="profile.phone">
+					Phone No.
+				</label>
+				<div class="input-div">
+					<input type="text" name="profile.phone" value="{{current_user_data.profile.phone}}" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-profile-dob">
+				<label for="profile.dob">
+					Date of Birth
+				</label>
+				<div class="input-div">
+					<div class="input-group date">
+						<input type="text" name="profile.dob" value="{{formatDate current_user_data.profile.dob ''}}" class="form-control " data-type="date">
+						<span class="input-group-addon">
+							<i class="fa fa-calendar">
+							</i>
+						</span>
+					</div>
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-profile-skills">
+				<label for="profile.skills">
+					Skills
+				</label>
+				<div class="input-div">
+					<input type="text" name="profile.skills" value="{{current_user_data.profile.skills}}" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-profile-county">
+				<label for="profile.county">
+					County
+				</label>
+				<div class="input-div">
+					<input type="text" name="profile.county" value="{{current_user_data.profile.county}}" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-profile-town">
+				<label for="profile.town">
+					Town
+				</label>
+				<div class="input-div">
+					<input type="text" name="profile.town" value="{{current_user_data.profile.town}}" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-profile-edu_level">
+				<label for="profile.edu_level">
+					Highest Educational Level
+				</label>
+				<div class="input-div">
+					<input type="text" name="profile.edu_level" value="{{current_user_data.profile.edu_level}}" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-profile-pri_sch">
+				<label for="profile.pri_sch">
+					Primary School
+				</label>
+				<div class="input-div">
+					<input type="text" name="profile.pri_sch" value="{{current_user_data.profile.pri_sch}}" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-profile-sec_sch">
+				<label for="profile.sec_sch">
+					Secondary School
+				</label>
+				<div class="input-div">
+					<input type="text" name="profile.sec_sch" value="{{current_user_data.profile.sec_sch}}" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-profile-uni">
+				<label for="profile.uni">
+					University
+				</label>
+				<div class="input-div">
+					<input type="text" name="profile.uni" value="{{current_user_data.profile.uni}}" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-profile-phonesmart">
+				<label for="profile.phonesmart">
+					Have Smartphone?
+				</label>
+				<div class="input-div">
+					<input type="text" name="profile.phonesmart" value="{{current_user_data.profile.phonesmart}}" class="form-control " data-type="bool">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-profile-bundle_type">
+				<label for="profile.bundle_type">
+					Bundle Type?
+				</label>
+				<div class="input-div">
+					<input type="text" name="profile.bundle_type" value="{{current_user_data.profile.bundle_type}}" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-profile-haslaptop">
+				<label for="profile.haslaptop">
+					Have Laptop?
+				</label>
+				<div class="input-div">
+					<input type="text" name="profile.haslaptop" value="{{current_user_data.profile.haslaptop}}" class="form-control " data-type="bool">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-profile-hasdesktop">
+				<label for="profile.hasdesktop">
+					Have Desktop?
+				</label>
+				<div class="input-div">
+					<input type="text" name="profile.hasdesktop" value="{{current_user_data.profile.hasdesktop}}" class="form-control " data-type="bool">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-profile-hasnet_at_home">
+				<label for="profile.hasnet_at_home">
+					Have Internet at home?
+				</label>
+				<div class="input-div">
+					<input type="text" name="profile.hasnet_at_home" value="{{current_user_data.profile.hasnet_at_home}}" class="form-control " data-type="bool">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-profile-cafe">
+				<label for="profile.cafe">
+					Work from a Cybercafe?
+				</label>
+				<div class="input-div">
+					<input type="text" name="profile.cafe" value="{{current_user_data.profile.cafe}}" class="form-control " data-type="bool">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-profile-rating">
+				<label for="profile.rating">
+					Rating
+				</label>
+				<div class="input-div">
+					<input type="text" name="profile.rating" value="{{current_user_data.profile.rating}}" class="form-control " data-type="integer">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-profile-stars">
+				<label for="profile.stars">
+					Stars
+				</label>
+				<div class="input-div">
+					<input type="text" name="profile.stars" value="{{current_user_data.profile.stars}}" class="form-control " data-type="integer">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-profile-tasks_completed">
+				<label for="profile.tasks_completed">
+					Tasks Completed
+				</label>
+				<div class="input-div">
+					<input type="text" name="profile.tasks_completed" value="{{current_user_data.profile.tasks_completed}}" class="form-control " data-type="integer">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-profile-hours_worked">
+				<label for="profile.hours_worked">
+					Hours Worked
+				</label>
+				<div class="input-div">
+					<input type="text" name="profile.hours_worked" value="{{current_user_data.profile.hours_worked}}" class="form-control " data-type="float">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-profile-last_login">
+				<label for="profile.last_login">
+					Last Login
+				</label>
+				<div class="input-div">
+					<div class="input-group date">
+						<input type="text" name="profile.last_login" value="{{formatDate current_user_data.profile.last_login ''}}" class="form-control " data-type="date">
+						<span class="input-group-addon">
+							<i class="fa fa-calendar">
+							</i>
+						</span>
+					</div>
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-profile-bankname">
+				<label for="profile.bankname">
+					Bank Name
+				</label>
+				<div class="input-div">
+					<input type="text" name="profile.bankname" value="{{current_user_data.profile.bankname}}" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-profile-bank_acc_no">
+				<label for="profile.bank_acc_no">
+					Bank Account Number
+				</label>
+				<div class="input-div">
+					<input type="text" name="profile.bank_acc_no" value="{{current_user_data.profile.bank_acc_no}}" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-profile-bank_swift">
+				<label for="profile.bank_swift">
+					SWIFT Code
+				</label>
+				<div class="input-div">
+					<input type="text" name="profile.bank_swift" value="{{current_user_data.profile.bank_swift}}" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-profile-bank_addr">
+				<label for="profile.bank_addr">
+					Bank Address
+				</label>
+				<div class="input-div">
+					<input type="text" name="profile.bank_addr" value="{{current_user_data.profile.bank_addr}}" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-profile-bank_curr">
+				<label for="profile.bank_curr">
+					Currency
+				</label>
+				<div class="input-div">
+					<input type="text" name="profile.bank_curr" value="{{current_user_data.profile.bank_curr}}" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-profile-passport_no">
+				<label for="profile.passport_no">
+					Passport Number
+				</label>
+				<div class="input-div">
+					<input type="text" name="profile.passport_no" value="{{current_user_data.profile.passport_no}}" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-profile-facebook">
+				<label for="profile.facebook">
+					Facebook URL
+				</label>
+				<div class="input-div">
+					<input type="text" name="profile.facebook" value="{{current_user_data.profile.facebook}}" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-profile-google">
+				<label for="profile.google">
+					Google+ URL
+				</label>
+				<div class="input-div">
+					<input type="text" name="profile.google" value="{{current_user_data.profile.google}}" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-profile-twitter">
+				<label for="profile.twitter">
+					Twitter ID
+				</label>
+				<div class="input-div">
+					<input type="text" name="profile.twitter" value="{{current_user_data.profile.twitter}}" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group  field-profile-website">
+				<label for="profile.website">
+					Website URL
+				</label>
+				<div class="input-div">
+					<input type="text" name="profile.website" value="{{current_user_data.profile.website}}" class="form-control " data-type="string">
+					<span id="help-text" class="help-block">
+					</span>
+					<span id="error-text" class="help-block">
+					</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="submit-div">
+					<button id="form-submit-button" class="btn btn-success" type="submit">
+						<span class="fa fa-check">
+						</span>
+						Save
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</template>
+
